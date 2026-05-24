@@ -41,12 +41,6 @@ mvn test
 From project root:
 
 ```bash
-mvn -q compile exec:java -Dexec.mainClass="com.ulsm.lab.barcode.App" -Dexec.args="encode P-1001 CBC S-22001"
-```
-
-or directly with Java after compile:
-
-```bash
 mvn -q package
 java -cp target/classes com.ulsm.lab.barcode.App encode P-1001 CBC S-22001
 java -cp target/classes com.ulsm.lab.barcode.App decode <BARCODE_VALUE>
