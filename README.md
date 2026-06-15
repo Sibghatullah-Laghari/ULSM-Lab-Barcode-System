@@ -163,3 +163,6 @@ or
 ```text
 decode <barcodeValue>
 ```
+###Future
+
+AI will be integrated soon for record analysis, patient analysis, and in management.
