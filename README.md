@@ -1,6 +1,6 @@
 # ULSM Lab Barcode Management Utility
 
-A lightweight Java application designed to generate, decode, and manage laboratory sample barcode information in a structured and reliable manner.
+A lightweight Java application designed to generate, decode, and manage laboratory sample barcode information in a structured and reliable manner. so, management become easy and also record can be digital and online.
 
 ## Introduction
 
