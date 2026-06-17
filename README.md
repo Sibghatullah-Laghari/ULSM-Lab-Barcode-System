@@ -1,8 +1,8 @@
-# ULSM Lab Barcode Management Utility
+# ULSM Lab Barcode Management Utility:
 
 A lightweight Java application designed to generate, decode, and manage laboratory sample barcode information in a structured and reliable manner. so, management become easy and also record can be digital and online.
 
-## Introduction
+## Introduction:
 
 This project serves as a foundation for laboratory barcode processing by allowing users to:
 
@@ -11,7 +11,7 @@ This project serves as a foundation for laboratory barcode processing by allowin
 * Store and retrieve sample records during runtime.
 * Perform validation checks before processing data.
 
-## Core Capabilities
+## Core Capabilities:
 
 * Base64 URL-safe barcode generation and decoding.
 * Validation of patient identifiers, sample identifiers, and test codes.
@@ -19,20 +19,18 @@ This project serves as a foundation for laboratory barcode processing by allowin
 * Simple command-line interface for demonstration and testing.
 * Maven build configuration with JUnit testing support.
 
-## Technologies Used
+## Technologies Used:
 
 * Java 17
 * Apache Maven 3.9+
 * JUnit 5
 
-## Installation
-
-### Prerequisites
+### Prerequisites:
 
 * Java Development Kit (JDK) 17
 * Maven 3.9 or newer
 
-### Getting Started
+### Getting Started:
 
 Clone the repository and execute:
 
@@ -42,7 +40,7 @@ mvn test
 
 This command compiles the project and runs all available unit tests.
 
-## Running the Application
+## Running the Application:
 
 After building the project:
 
@@ -50,21 +48,19 @@ After building the project:
 mvn -q package
 ```
 
-### Create a Barcode
+### Create a Barcode:
 
 ```bash
 java -cp target/classes com.ulsm.lab.barcode.App encode P-1001 CBC S-22001
 ```
 
-### Decode a Barcode
+### Decode a Barcode:
 
 ```bash
 java -cp target/classes com.ulsm.lab.barcode.App decode <BARCODE>
 ```
 
-## Example Usage
-
-### Barcode Generation
+### Barcode Generation:
 
 Command:
 
@@ -78,7 +74,7 @@ Output:
 UC0xMDAxfENCQ3xTLTIyMDAx
 ```
 
-### Barcode Decoding
+### Barcode Decoding:
 
 Command:
 
@@ -92,7 +88,7 @@ Output:
 patientId=P-1001, testCode=CBC, sampleId=S-22001
 ```
 
-## Directory Layout
+## Directory Layout:
 
 ```text
 .
@@ -109,7 +105,7 @@ patientId=P-1001, testCode=CBC, sampleId=S-22001
 └── README.md
 ```
 
-## Processing Workflow
+## Processing Workflow:
 
 1. User submits a patient ID, test code, and sample ID.
 2. The record object validates the supplied information.
@@ -118,9 +114,7 @@ patientId=P-1001, testCode=CBC, sampleId=S-22001
 5. During decoding, the original values are reconstructed.
 6. Records may be stored and accessed through the in-memory repository.
 
-## Common Issues
-
-### Maven Not Installed
+### Maven Not Installed:
 
 Error:
 
@@ -132,7 +126,7 @@ Solution:
 
 Install Maven and verify it is available in your system PATH.
 
-### Unsupported Java Version
+### Unsupported Java Version:
 
 Error:
 
@@ -144,13 +138,13 @@ Solution:
 
 Verify that Java 17 is installed and selected as the active JDK.
 
-### Invalid Barcode Exception
+### Invalid Barcode Exception:
 
 Cause:
 
 The barcode value may not have been produced by this application or has been modified.
 
-### No CLI Response
+### No CLI Response:
 
 Ensure the correct syntax is used:
 
