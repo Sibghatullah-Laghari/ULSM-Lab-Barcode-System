@@ -6,20 +6,33 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * Simple in-memory repository for storing laboratory sample records.
+ */
 public class InMemorySampleRecordRepository {
+
+    // Stores records using the sample ID as the unique key.
     private final Map<String, LabSampleRecord> recordsBySampleId = new ConcurrentHashMap<>();
 
+    /**
+     * Saves a sample record into the repository.
+     */
     public void save(LabSampleRecord record) {
         if (record == null) {
             throw new IllegalArgumentException("record must not be null");
         }
+
         recordsBySampleId.put(record.sampleId(), record);
     }
 
+    /**
+     * Finds a record by its sample ID.
+     */
     public Optional<LabSampleRecord> findBySampleId(String sampleId) {
         if (sampleId == null || sampleId.isBlank()) {
             throw new IllegalArgumentException("sampleId must not be blank");
         }
+
         return Optional.ofNullable(recordsBySampleId.get(sampleId.trim()));
     }
 }
