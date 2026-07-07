@@ -1,36 +1,38 @@
-# ULSM Lab Barcode Management Utility:
+# ULSM Lab Barcode Management Utility
 
-A lightweight Java application designed to generate, decode, and manage laboratory sample barcode information in a structured and reliable manner. so, management become easy and also record can be digital and online.
+A compact Java application that simplifies the generation, decoding, and management of laboratory sample barcodes. The utility helps laboratories maintain organized digital records and makes sample tracking more efficient.
 
-## Introduction:
+## Overview
 
-This project serves as a foundation for laboratory barcode processing by allowing users to:
+This project provides a simple foundation for barcode handling in laboratory environments. It enables users to:
 
-* Generate barcode strings from laboratory sample information.
-* Decode barcode values back into meaningful records.
-* Store and retrieve sample records during runtime.
-* Perform validation checks before processing data.
+* Generate barcode values from laboratory sample information.
+* Decode barcode data back into readable sample details.
+* Store and access sample records during application runtime.
+* Validate input before barcode processing takes place.
 
-## Core Capabilities:
+## Main Features
 
-* Base64 URL-safe barcode generation and decoding.
-* Validation of patient identifiers, sample identifiers, and test codes.
-* Runtime repository for managing sample records.
-* Simple command-line interface for demonstration and testing.
-* Maven build configuration with JUnit testing support.
+* URL-safe Base64 barcode encoding and decoding.
+* Validation for patient IDs, sample IDs, and laboratory test codes.
+* In-memory repository for temporary sample record management.
+* Lightweight command-line interface for testing and demonstrations.
+* Maven-based project with JUnit 5 test support.
 
-## Technologies Used:
+## Technology Stack
 
 * Java 17
 * Apache Maven 3.9+
 * JUnit 5
 
-### Prerequisites:
+## Requirements
+
+Before running the application, ensure you have:
 
 * Java Development Kit (JDK) 17
-* Maven 3.9 or newer
+* Apache Maven 3.9 or later
 
-### Getting Started:
+## Build and Test
 
 Clone the repository and execute:
 
@@ -38,57 +40,45 @@ Clone the repository and execute:
 mvn test
 ```
 
-This command compiles the project and runs all available unit tests.
+This command builds the project and executes all available unit tests.
 
-## Running the Application:
+## Packaging the Project
 
-After building the project:
+Generate the application using:
 
 ```bash
 mvn -q package
 ```
 
-### Create a Barcode:
+## Encoding a Barcode
+
+Run:
 
 ```bash
 java -cp target/classes com.ulsm.lab.barcode.App encode P-1001 CBC S-22001
 ```
 
-### Decode a Barcode:
-
-```bash
-java -cp target/classes com.ulsm.lab.barcode.App decode <BARCODE>
-```
-
-### Barcode Generation:
-
-Command:
-
-```bash
-java -cp target/classes com.ulsm.lab.barcode.App encode P-1001 CBC S-22001
-```
-
-Output:
+Example output:
 
 ```text
 UC0xMDAxfENCQ3xTLTIyMDAx
 ```
 
-### Barcode Decoding:
+## Decoding a Barcode
 
-Command:
+Run:
 
 ```bash
 java -cp target/classes com.ulsm.lab.barcode.App decode UC0xMDAxfENCQ3xTLTIyMDAx
 ```
 
-Output:
+Example output:
 
 ```text
 patientId=P-1001, testCode=CBC, sampleId=S-22001
 ```
 
-## Directory Layout:
+## Project Structure
 
 ```text
 .
@@ -105,16 +95,18 @@ patientId=P-1001, testCode=CBC, sampleId=S-22001
 └── README.md
 ```
 
-## Processing Workflow:
+## Workflow
 
-1. User submits a patient ID, test code, and sample ID.
-2. The record object validates the supplied information.
-3. Barcode data is assembled into a pipe-separated format.
+1. The user enters a patient ID, test code, and sample ID.
+2. The application validates the provided information.
+3. A pipe-separated data string is created.
 4. The payload is encoded using URL-safe Base64.
-5. During decoding, the original values are reconstructed.
-6. Records may be stored and accessed through the in-memory repository.
+5. During decoding, the original sample information is restored.
+6. Sample records can be temporarily stored and retrieved from the in-memory repository.
 
-### Maven Not Installed:
+## Common Issues
+
+### Maven Not Found
 
 Error:
 
@@ -122,11 +114,11 @@ Error:
 mvn: command not found
 ```
 
-Solution:
+Resolution:
 
-Install Maven and verify it is available in your system PATH.
+Install Apache Maven and ensure it has been added to your system PATH.
 
-### Unsupported Java Version:
+### Java Version Error
 
 Error:
 
@@ -134,29 +126,32 @@ Error:
 invalid target release: 17
 ```
 
-Solution:
+Resolution:
 
-Verify that Java 17 is installed and selected as the active JDK.
+Confirm that JDK 17 is installed and configured as the active Java version.
 
-### Invalid Barcode Exception:
+### Invalid Barcode
 
-Cause:
+Possible reason:
 
-The barcode value may not have been produced by this application or has been modified.
+The barcode may have been altered or was not generated by this application.
 
-### No CLI Response:
+### CLI Does Not Work
 
-Ensure the correct syntax is used:
+Verify that the command syntax is correct.
+
+For encoding:
 
 ```text
 encode <patientId> <testCode> <sampleId>
 ```
 
-or
+For decoding:
 
 ```text
 decode <barcodeValue>
 ```
-###Future
 
-AI will be integrated soon for record analysis, patient analysis, and in management.
+## Future Enhancements
+
+Future versions will include AI-powered capabilities to assist with laboratory record analysis, patient data insights, and overall laboratory management.
