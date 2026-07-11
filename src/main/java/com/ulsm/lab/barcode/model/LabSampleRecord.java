@@ -1,11 +1,9 @@
-package com.ulsm.lab.barcode.model;
-
 /**
  * Represents a single laboratory sample record.
  */
 public record LabSampleRecord(String patientId, String testCode, String sampleId) {
 
-    // Validate all fields when creating a new record.
+    // Validate and normalize all fields when creating a new record.
     public LabSampleRecord {
         patientId = requireNonBlank(patientId, "patientId");
         testCode = requireNonBlank(testCode, "testCode");
@@ -20,7 +18,7 @@ public record LabSampleRecord(String patientId, String testCode, String sampleId
             throw new IllegalArgumentException(fieldName + " must not be blank");
         }
 
-        // Remove leading and trailing whitespace.
+        // Trim leading and trailing whitespace before storing the value.
         return value.trim();
     }
 }
