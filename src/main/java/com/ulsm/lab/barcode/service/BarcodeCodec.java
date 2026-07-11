@@ -6,11 +6,11 @@ import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
 /**
- * Utility class for barcode encoding and decoding.
+ * Utility class for encoding and decoding laboratory barcode data.
  */
 public final class BarcodeCodec {
 
-    // Separator used to combine record fields.
+    // Delimiter used to combine individual record fields.
     private static final String DELIMITER = "|";
 
     // Prevent instantiation.
@@ -25,7 +25,7 @@ public final class BarcodeCodec {
             throw new IllegalArgumentException("record must not be null");
         }
 
-        // Build the payload before encoding.
+        // Create the payload before encoding it to Base64.
         String payload = String.join(DELIMITER, record.patientId(), record.testCode(), record.sampleId());
 
         return Base64.getUrlEncoder()
@@ -43,7 +43,7 @@ public final class BarcodeCodec {
 
         byte[] decodedBytes;
         try {
-            // Decode the Base64 barcode value.
+            // Decode the URL-safe Base64 barcode value.
             decodedBytes = Base64.getUrlDecoder().decode(barcodeValue.trim());
         } catch (IllegalArgumentException ex) {
             throw new IllegalArgumentException("barcodeValue is not a valid encoded payload", ex);
@@ -51,7 +51,7 @@ public final class BarcodeCodec {
 
         String decodedPayload = new String(decodedBytes, StandardCharsets.UTF_8);
 
-        // Split the decoded payload into individual fields.
+        // Split the decoded payload into its individual components.
         String[] parts = decodedPayload.split("\\|", -1);
 
         if (parts.length != 3) {
