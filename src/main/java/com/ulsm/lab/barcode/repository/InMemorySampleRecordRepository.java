@@ -7,11 +7,11 @@ import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Simple in-memory repository for storing laboratory sample records.
+ * Simple thread-safe in-memory repository for storing laboratory sample records.
  */
 public class InMemorySampleRecordRepository {
 
-    // Stores records using the sample ID as the unique key.
+    // Stores records using the sample ID as the unique identifier.
     private final Map<String, LabSampleRecord> recordsBySampleId = new ConcurrentHashMap<>();
 
     /**
@@ -26,7 +26,7 @@ public class InMemorySampleRecordRepository {
     }
 
     /**
-     * Finds a record by its sample ID.
+     * Retrieves a sample record by its sample ID.
      */
     public Optional<LabSampleRecord> findBySampleId(String sampleId) {
         if (sampleId == null || sampleId.isBlank()) {
