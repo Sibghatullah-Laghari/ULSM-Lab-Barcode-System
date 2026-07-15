@@ -6,26 +6,26 @@ import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
 /**
- * Utility class for encoding and decoding laboratory barcode data.
+ * Utility class used to encode and decode laboratory barcode information.
  */
 public final class BarcodeCodec {
 
-    // Delimiter used to combine individual record fields.
+    // Separator used when combining laboratory record fields.
     private static final String DELIMITER = "|";
 
-    // Prevent instantiation.
+    // Prevent direct creation of utility class instances.
     private BarcodeCodec() {
     }
 
     /**
-     * Encodes a laboratory sample record into a URL-safe Base64 barcode.
+     * Encodes a laboratory sample record as a URL-safe Base64 barcode.
      */
     public static String encode(LabSampleRecord record) {
         if (record == null) {
             throw new IllegalArgumentException("record must not be null");
         }
 
-        // Create the payload before encoding it to Base64.
+        // Build the record payload before applying Base64 encoding.
         String payload = String.join(DELIMITER, record.patientId(), record.testCode(), record.sampleId());
 
         return Base64.getUrlEncoder()
@@ -34,7 +34,7 @@ public final class BarcodeCodec {
     }
 
     /**
-     * Decodes a barcode back into a laboratory sample record.
+     * Decodes a barcode value into a laboratory sample record.
      */
     public static LabSampleRecord decode(String barcodeValue) {
         if (barcodeValue == null || barcodeValue.isBlank()) {
@@ -43,7 +43,7 @@ public final class BarcodeCodec {
 
         byte[] decodedBytes;
         try {
-            // Decode the URL-safe Base64 barcode value.
+            // Decode the provided URL-safe Base64 barcode.
             decodedBytes = Base64.getUrlDecoder().decode(barcodeValue.trim());
         } catch (IllegalArgumentException ex) {
             throw new IllegalArgumentException("barcodeValue is not a valid encoded payload", ex);
@@ -51,7 +51,7 @@ public final class BarcodeCodec {
 
         String decodedPayload = new String(decodedBytes, StandardCharsets.UTF_8);
 
-        // Split the decoded payload into its individual components.
+        // Separate the decoded payload into individual record fields.
         String[] parts = decodedPayload.split("\\|", -1);
 
         if (parts.length != 3) {
