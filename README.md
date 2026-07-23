@@ -12,7 +12,7 @@ This project provides a simple framework for processing barcodes in laboratory e
 * Generate barcode values from laboratory sample information.
 * Decode barcode values into readable sample details.
 * Store sample records in memory during application execution.
-* Validate input before barcode generation or decoding.
+* Validate input before barcode generation or decoding..
 
 ## Main Features
 
@@ -30,7 +30,7 @@ This project provides a simple framework for processing barcodes in laboratory e
 
 ## Requirements
 
-Before starting the application, make sure the following software is installed:
+Before starting the application, make sure the following software is installed:-
 
 * Java Development Kit (JDK) 17
 * Apache Maven 3.9 or newer
