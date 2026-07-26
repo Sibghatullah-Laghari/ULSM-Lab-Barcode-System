@@ -11,16 +11,16 @@ This project provides a simple framework for processing barcodes in laboratory e
 
 * Generate barcode values from laboratory sample information.
 * Decode barcode values into readable sample details.
-* Store sample records in memory during application execution.
+* Store sample records in memory during application execution..
 * Validate input before barcode generation or decoding..
 
 ## Main Features
 
 * URL-safe Base64 encoding and decoding.
-* Validation of patient IDs, sample IDs, and laboratory test codes.
-* In-memory repository for temporary storage of sample records.
-* Simple command-line interface for demonstration and testing.
-* Maven-based project with JUnit 5 unit testing support.
+* Validation of patient IDs, sample IDs, and laboratory test codes..
+* In-memory repository for temporary storage of sample records..
+* Simple command-line interface for demonstration and testing..
+* Maven-based project with JUnit 5 unit testing support..
 
 ## Technology Stack
 
