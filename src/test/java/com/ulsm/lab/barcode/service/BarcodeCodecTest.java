@@ -12,7 +12,7 @@ class BarcodeCodecTest {
 
     @Test
     void encodeDecodeRoundTripKeepsFields() {
-        // Create the original laboratory sample record
+        // Create the original laboratory sample record.
         LabSampleRecord original = new LabSampleRecord("P-1001", "CBC", "S-22001");
 
         // Encode and decode the sample record
