@@ -19,7 +19,7 @@ This project provides a simple framework for processing barcodes in laboratory e
 * URL-safe Base64 encoding and decoding.
 * Validation of patient IDs, sample IDs, and laboratory test codes..
 * In-memory repository for temporary storage of sample records..
-* Simple command-line interface for demonstration and testing..
+* Simple command-line interface for demonstration and testing.
 * Maven-based project with JUnit 5 unit testing support..
 
 ## Technology Stack
