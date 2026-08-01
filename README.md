@@ -7,7 +7,7 @@ A lightweight Java application for generating, decoding, and managing laboratory
 
 ## Overview
 
-This project provides a simple framework for processing barcodes in laboratory environments. It enables users to:-
+This project provides a simple framework for processing barcodes in laboratory environments. It enables users to
 
 * Generate barcode values from laboratory sample information.
 * Decode barcode values into readable sample details.
