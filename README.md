@@ -11,8 +11,8 @@ This project provides a simple framework for processing barcodes in laboratory e
 
 * Generate barcode values from laboratory sample information.
 * Decode barcode values into readable sample details.
-* Store sample records in memory during application execution..
-* Validate input before barcode generation or decoding..
+* Store sample records in memory during application execution.
+* Validate input before barcode generation or decoding.
 
 ## Main Features
 
