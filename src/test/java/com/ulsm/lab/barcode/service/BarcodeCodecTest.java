@@ -15,7 +15,7 @@ class BarcodeCodecTest {
         // Create the original laboratory sample record.
         LabSampleRecord original = new LabSampleRecord("P-1001", "CBC", "S-22001");
 
-        // Encode and decode the sample record
+        // Encode and decode the sample record.
         String barcode = BarcodeCodec.encode(original);
         LabSampleRecord decoded = BarcodeCodec.decode(barcode);
 
