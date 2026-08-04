@@ -8,7 +8,7 @@ import com.ulsm.lab.barcode.service.BarcodeCodec;
  */
 public final class App {
 
-    // Prevent instantiation of this utility class.
+    // Prevent instantiation of this utility class
     private App() {
     }
 
