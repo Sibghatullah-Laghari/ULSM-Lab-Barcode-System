@@ -30,7 +30,7 @@ This project provides a simple framework for processing barcodes in laboratory e
 
 ## Requirements
 
-Before starting the application, make sure the following software is installed:-
+Before starting the application, make sure the following software is installed
 
 * Java Development Kit (JDK) 17
 * Apache Maven 3.9 or newer
