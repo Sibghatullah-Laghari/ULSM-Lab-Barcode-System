@@ -40,4 +40,4 @@ Before starting the application, make sure the following software is installed
 Clone the repository and execute:
 
 ```bash
-mvn test..
+mvn test.
