@@ -1,5 +1,5 @@
 /**
- * Represents an individual laboratory sample record.
+ * Represents an individual laboratory sample record...
  */
 public record LabSampleRecord(String patientId, String testCode, String sampleId) {
 
