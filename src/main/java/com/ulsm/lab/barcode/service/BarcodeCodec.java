@@ -6,7 +6,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
 /**
- * Utility class used to encode and decode laboratory barcode information..
+ * Utility class used to encode and decode laboratory barcode information....
  */
 public final class BarcodeCodec {
 
