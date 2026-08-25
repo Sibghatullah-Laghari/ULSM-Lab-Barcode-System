@@ -4,7 +4,7 @@ import com.ulsm.lab.barcode.model.LabSampleRecord;
 import com.ulsm.lab.barcode.service.BarcodeCodec;
 
 /**
- * Command-line entry point for the laboratory barcode utility.
+ * Command-line entry point for the laboratory barcode utility...
  */
 public final class App {
 
