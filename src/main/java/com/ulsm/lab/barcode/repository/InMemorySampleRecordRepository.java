@@ -26,7 +26,7 @@ public class InMemorySampleRecordRepository {
     }
 
     /**
-     * Retrieves a sample record by its sample ID.
+     * Retrieves a sample record by its sample ID...
      */
     public Optional<LabSampleRecord> findBySampleId(String sampleId) {
         if (sampleId == null || sampleId.isBlank()) {
