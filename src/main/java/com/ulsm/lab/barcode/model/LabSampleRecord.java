@@ -1,5 +1,5 @@
 /**
- * Represents an individual laboratory sample record...
+ * Represents an individual laboratory sample records...
  */
 public record LabSampleRecord(String patientId, String testCode, String sampleId) {
 
@@ -11,7 +11,7 @@ public record LabSampleRecord(String patientId, String testCode, String sampleId
     }
 
     /**
-     * Verifies that the supplied value is neither null nor blank.
+     * Verifies that the supplied value is neither null nor blank...
      */
     private static String requireNonBlank(String value, String fieldName) {
         if (value == null || value.isBlank()) {
