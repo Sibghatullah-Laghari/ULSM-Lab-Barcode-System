@@ -35,9 +35,3 @@ Ensure the following are installed before running the application:
 * Java Development Kit (JDK) 17
 * Apache Maven 3.9 or later
 
-## Build and Test
-
-Clone the repository and run:
-
-```bash
-mvn test
