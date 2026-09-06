@@ -10,9 +10,6 @@ public record LabSampleRecord(String patientId, String testCode, String sampleId
         sampleId = requireNonBlank(sampleId, "sampleId");
     }
 
-    /**
-     * Verifies that the supplied value is neither null nor blank...
-     */
     private static String requireNonBlank(String value, String fieldName) {
         if (value == null || value.isBlank()) {
             throw new IllegalArgumentException(fieldName + " must not be blank");
