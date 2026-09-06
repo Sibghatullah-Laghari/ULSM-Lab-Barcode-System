@@ -5,9 +5,6 @@ import com.ulsm.lab.barcode.model.LabSampleRecord;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
-/**
- *class used to encode and decode laboratory barcode information....
- */
 public final class BarcodeCodec {
 
     // Separator used when combining laboratory record fields.
