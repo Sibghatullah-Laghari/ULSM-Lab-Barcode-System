@@ -6,9 +6,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * Simple thread-safe in-memory repository for storing laboratory sample records...
- */
+
 public class InMemorySampleRecordRepository {
 
     // Stores records using the sample ID as the unique identifier.
