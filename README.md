@@ -20,7 +20,6 @@ This project offers a straightforward framework for barcode processing in lab se
 * Validation rules for patient IDs, sample IDs, and lab test codes.
 * Temporary in‑memory repository for storing sample entries.
 * Simple command‑line interface for demonstration and testing purposes.
-* Maven‑based build with JUnit 5 unit test coverage.
 
 ## Technology Stack
 
