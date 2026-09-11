@@ -10,7 +10,6 @@ public final class BarcodeCodec {
     // Separator used when combining laboratory record fields.
     private static final String DELIMITER = "|";
 
-    // Prevent direct creation of utility class instances.
     private BarcodeCodec() {
     }
 
