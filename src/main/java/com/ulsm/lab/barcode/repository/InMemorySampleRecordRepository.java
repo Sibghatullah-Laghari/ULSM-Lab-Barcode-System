@@ -12,9 +12,6 @@ public class InMemorySampleRecordRepository {
     // Stores records using the sample ID as the unique identifier.
     private final Map<String, LabSampleRecord> recordsBySampleId = new ConcurrentHashMap<>();
 
-    /**
-     * Saves a sample record into the repository.
-     */
     public void save(LabSampleRecord record) {
         if (record == null) {
             throw new IllegalArgumentException("record must not be null");
