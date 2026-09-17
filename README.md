@@ -32,4 +32,4 @@ This project offers a straightforward framework for barcode processing in lab se
 Ensure the following are installed before running the application:
 
 * Java Development Kit (JDK) 17
-* ////////////........
+
