@@ -15,7 +15,7 @@ public record LabSampleRecord(String patientId, String testCode, String sampleId
             throw new IllegalArgumentException(fieldName + " must not be blank");
         }
 
-        // Remove leading and trailing whitespace before storing the field value.
+        // Remove leading and trailing whitespace before storing the field value..
         return value.trim();
     }
 }
