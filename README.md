@@ -1,4 +1,4 @@
-# ULSM Lab Barcode Management Utility
+# ULSM Lab Barcode Management Utility:
 
 > 📅 **Last updated:** 2026-09-23  
 > 📌 *Note:* Minor documentation refresh with improved developer guidance.
