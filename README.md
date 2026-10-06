@@ -1,4 +1,4 @@
-# ULSM Lab Barcode Management Utility:
+pp mil# ULSM Lab Barcode Management Utility:
 
 > 📅 **Last updated:** 2026-09-23  
 > 📌 *Note:* Minor documentation refresh with improved developer guidance.
@@ -32,4 +32,3 @@ This project offers a straightforward framework for barcode processing in lab se
 Ensure the following are installed before running the application:
 
 * Java Development Kit (JDK) 17
-///
