@@ -1,6 +1,6 @@
 pp mil# ULSM Lab Barcode Management Utility:
 
-> 📅 **Last updated:** 2026-09-23  
+> 📅 **Last updated:** 2026-10-17  
 > 📌 *Note:* Minor documentation refresh with improved developer guidance.
 
 A lightweight Java application for generating, decoding, and managing laboratory sample barcodes. This utility improves sample traceability and assists laboratories in maintaining structured digital logs.
