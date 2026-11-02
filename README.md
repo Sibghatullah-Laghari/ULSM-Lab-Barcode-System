@@ -25,7 +25,7 @@ This project offers a straightforward framework for barcode processing in lab se
 
 * Java 17
 * Apache Maven 3.9+
-* JUnit 5
+* JUnit 5.
 
 ## Requirements
 
