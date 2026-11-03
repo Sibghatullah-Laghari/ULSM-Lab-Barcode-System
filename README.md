@@ -23,7 +23,7 @@ This project offers a straightforward framework for barcode processing in lab se
 
 ## Technology Stack
 
-* Java 17
+* Java 17.
 * Apache Maven 3.9+
 * JUnit 5.
 
