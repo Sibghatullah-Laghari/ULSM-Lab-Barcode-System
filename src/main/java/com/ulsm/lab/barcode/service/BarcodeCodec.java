@@ -14,7 +14,7 @@ public final class BarcodeCodec {
     }
 
     /**
-     * Encodes a laboratory sample record as a URL-safe Base64 barcode..
+     * Encodes a laboratory sample record as a URL-safe Base64 barcode../.
      */
     public static String encode(LabSampleRecord record) {
         if (record == null) {
